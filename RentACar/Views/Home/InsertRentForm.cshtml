@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "InsertRentForm";
+}
+
+<div class=" row valign-wrapper">
+    <div class="col s6 offset-s3 valign">
+        <div class="card-panel hoverable center-align" style="width: 548px;">
+            <form action="InsertRent">
+              
+                    
+                    <div class="row">
+                        <div class="input-field col l6 m6 s6">
+                            <select id="CarMake" name="CarMake">
+                                <option value="0" disabled selected>None</option>
+                                <option value="Audi">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Subaru">Subaru</option>
+                            </select>
+                            <label> Car Make </label>
+                        </div>
+
+                        <div class="input-field col l6 m6 s6">
+                            <select id="CarModel" name="CarModel">
+                                <option value="0" disabled selected>None</option>
+                                <option value="Compact">Compact</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Standard">Standard</option>
+                                
+                            </select>
+                            <label> Car Model </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col l6 m6 s6">
+                            
+                            <input type="date" class="datepicker" name="DateStart" />
+                            <label>Date Start</label>
+                        </div>
+
+                        <div class="input-field col l6 m6 s6">
+                            <div class="input-field">
+                                <input id="MileageStart" name="MileageStart" type="number" class="validate">
+                                <label class="active" for="MileageStart" >Mileage Start</label>
+                            </div>
+                            <div class="input-field hide" >
+                                <select id="MileageEnd" name="MileageEnd">
+                                    <option value="0" >None</option>                                   
+                                </select>                               
+                            </div>
+                            <div class="hide">
+                                    <input placeholder="Total" id="Total" type="text" class="validate" name="Total" value=0>
+                                    <label for="Total">Total</label>
+                                </div>
+                            <div class="hide">
+                                <input placeholder="Total" id="Total" type="text" class="validate" name="Total" value=0>
+                                <label for="Total">Total</label>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="input-field">
+                    <input id="DaysUse" name="DaysUse" type="number" class="validate">
+                    <label class="active" for="DaysUse">How many Days?</label>
+                </div>
+
+                    <button class="btn waves-effect waves-light black" type="Reset" value="Reset" name="action" style="right: 20px;">Reset</button>
+
+                    <button class="btn waves-effect waves-light black" type="Submit" value="Submit" name="action">Send</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
+

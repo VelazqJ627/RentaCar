@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR RENTAL</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+
+
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed ">
+            <nav class="blue darken-4">
+                <div class="nav-wrapper container">
+                    <a href="/Home" class="brand-logo center white-text">Car Rental's</a>
+                    <ul class="right hide-on-med-and-down white-text">
+               
+
+                    </ul>
+
+                  
+                   
+                        <a href="#" data-activates="slide-out" class="button-collapse show-on-large">Menu</a>
+
+                    
+                </div>
+            </nav>
+        </div>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="/Home/InsertRentForm" >Rent a Car</a></li>
+            <li><a href="/Home/MyRent" >Return a Car</a></li>
+
+        </ul>
+    </header>
+
+
+    <div class="container">
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="~/Content/init.js"></script>
+    
+</body>
+</html>

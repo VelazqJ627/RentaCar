@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "InsertRent";
+}
+
+<div class="center">
+    <h5>Online Recipt</h5>
+    <p>Please Print or Screenshot</p>
+</div>
+<div class=" row valign-wrapper">
+    <div class="col s6 offset-s3 valign">
+        <div class="card-panel hoverable" style="width: 548px;">
+            <div class="card-image">
+                <img src="https://cdn.extra.ie/wp-content/uploads/2016/10/14155311/Couple-Car-Driving.jpg" class="responsive-img" />
+            </div>
+            <div class="card-content">
+                @User.Identity.Name Rented:
+                <div class="center-align">
+                 <h5>Vehicle: @ViewBag.CarMake  @ViewBag.CarModel Model</h5> 
+                 
+                 <h5>Your Preliminary Total is: $@ViewBag.Total</h5>
+                    <br />
+                    <h4>You have @ViewBag.DaysUse days left until the vehicle has to be returned</h4>
+                    
+                </div>
+
+                
+                
+
+            </div>
+            <div class="card-action center-align">
+                <a href="/Home/MyRent" class="waves-effect waves-light btn black">View my Orders</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>

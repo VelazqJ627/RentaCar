@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "RentDetail";
+}
+
+<div class=" row valign-wrapper">
+    <div class="col s6 offset-s3 valign">
+        <div class="card-panel hoverable center-align" style="width: 548px;">
+            <form action="UpdateRent">
+@foreach (var anItem in ViewBag.ListOfRent)
+{
+
+                <div class="row">
+                    <div class="input-field col l6 m6 s6">
+
+                        <input disabled value="@anItem.CarMake" id="CarMake" type="text" class="validate">
+                        <label for="CarMake">Car Make</label>
+                    </div>
+
+                    <div class="input-field col l6 m6 s6">
+                        <input disabled value="@anItem.CarModel" id="CarModel" type="text" class="validate">
+                        <label for="CarModel">Car Model</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l6 m6 s6">
+
+                        <input disabled value="@anItem.MileageStart" id="MileageStart" type="number" class="validate">
+                        <label for="MileageStart">Mileage Start</label>
+                    </div>
+
+                    <div class="col l6 m6 s6">
+                        <div class="input-field">
+                            <input id="MileageEnd" name="MileageEnd" type="number" class="validate">
+                            <label class="active" for="MileageEnd">Mileage End</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l6 m6 s6">
+
+                        <input disabled value="@anItem.DateStart" id="DateStart" type="text" class="validate">
+                        <label for="DateStart">Date Start</label>
+                    </div>
+
+                    <div class="col l6 m6 s6">
+                        <div class="input-field ">
+
+                            <input type="date" class="datepicker" name="DateEnd" />
+                            <label>Date End</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field hide">
+                    <select id="DateStart" name="DateStart">
+                        <option value="@anItem.DateStart">None</option>
+                    </select>
+                </div>
+                <div class="input-field hide">
+                    <select id="MileageStart" name="MileageStart">
+                        <option value="@anItem.MileageStart">None</option>
+                    </select>
+                </div>
+                <div class="input-field hide">
+                    <select id="RentId" name="RentId">
+                        <option value="@anItem.RentId">None</option>
+                    </select>
+                </div>
+                
+                <div class="input-field hide">
+                    <select id="DaysUse" name="DaysUse">
+                        <option value="@anItem.DaysUse">None</option>
+                    </select>
+                </div>
+                <div class="input-field hide">
+                    <select id="Total" name="Total">
+                        <option value="@anItem.Total">None</option>
+                    </select>
+                </div>
+
+}               <button class="btn waves-effect waves-light black" type="Reset" value="Reset" name="action" style="right: 20px;">Reset</button>
+
+                <button class="btn waves-effect waves-light black" type="Submit" value="Submit" name="action">Send</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+

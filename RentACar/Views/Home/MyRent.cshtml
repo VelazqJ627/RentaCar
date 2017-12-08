@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "MyRent";
+}
+
+<table class="responsive-table highlight">
+    <thead>
+        <tr>
+            <th>Rent Id</th>
+            <th>Id</th>
+            <th>Car Make</th>
+            <th>Car Model</th>
+            <th>Days Used</th>
+            <th>Date Start</th>
+            <th>Date End</th>
+            <th>Total</th>
+   
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var anItem in ViewBag.ListOfRent)
+        {
+            
+                <tr>
+                    
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.RentId</a></td>
+                    
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.Id</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.CarMake</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.CarModel</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.DaysUse</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.DateStart</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.DateEnd</a></td>
+                        <td><a href="RentDetail?RentId=@anItem.RentId">@anItem.Total</a></td>
+                    
+
+
+</tr>
+                
+                }
+</tbody>
+</table>
+
+
+<a class="btn btn-default" href="Index" style="margin-bottom: 10px;">Return</a><br />
+
